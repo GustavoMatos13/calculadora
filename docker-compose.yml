@@ -1,0 +1,25 @@
+services:
+  django:
+    build: ./Calculadora
+    container_name: calculadora
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./calculadora:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  angular:
+    build: ./calculadora-frontEnd
+    container_name: calculadora-frontEnd
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./calculadora-frontEnd:/app
+    networks:
+      - app_network
+    command: npm start  # Inicia o servidor Angular em modo de desenvolvimento
+
+networks:
+  app_network:
+    driver: bridge
