@@ -13,8 +13,6 @@ será possível calcular apenas uma operação por vez.
 - Windows
 
 ## TESTES
-- Entre na pasta raiz do projeto onde esta localizado o docker-compose.yml
-
 - Dentro da pasta chamada calculadora-frontEnd clone o repositório: https://github.com/GustavoMatos13/angular-project.git
 - Entre no diretorio e crie um user name e password: docker exec -it calculadora python manage.py createsuperuser
 - Ainda na pasta do front crie uma imagem: docker build -t angular-docker .
