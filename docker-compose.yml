@@ -15,10 +15,11 @@ services:
     ports:
       - "4200:4200"
     volumes:
+      - /app/node_modules
       - ./calculadora-frontEnd:/app
     networks:
       - app_network
-    command: npm start  # Inicia o servidor Angular em modo de desenvolvimento
+    command: npm start
 
 networks:
   app_network:
