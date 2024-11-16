@@ -8,19 +8,3 @@ services:
       - ./calculadora:/app
     environment:
       - PYTHONUNBUFFERED=1
-
-  angular:
-    build: ./calculadora-frontEnd
-    container_name: calculadora-frontEnd
-    ports:
-      - "4200:4200"
-    volumes:
-      - /app/node_modules
-      - ./calculadora-frontEnd:/app
-    networks:
-      - app_network
-    command: npm start
-
-networks:
-  app_network:
-    driver: bridge

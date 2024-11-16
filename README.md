@@ -16,8 +16,8 @@ será possível calcular apenas uma operação por vez.
 - Entre na pasta raiz do projeto onde esta localizado o docker-compose.yml
 - Use o comando no terminal para criar os containers: docker-compose up -d
 - Use o comando e crie um user name e password: docker exec -it calculadora python manage.py createsuperuser
-- Crie uma pasta chamada calculadora-frontEnd e clone o projeto dentro: https://github.com/GustavoMatos13/angular-project.git
-- Dentro do projeto rode os comandos not terminal: docker build -t angular-docker .
+- Dentro da pasta chamada calculadora-frontEnd clone o repositório: https://github.com/GustavoMatos13/angular-project.git
+- Dentro do projeto rode os comandos no terminal: docker build -t angular-docker .
 - Em seguida: docker run -p 4200:4200 angular-docker 
 - Na raiz do projeto rode o comando na: docker-compose up -d
-- Acesse http://localhost:4200/login e acesse com o username e password criados no back end do python pelo terminal
+- Acesse http://localhost:4200/app/login e acesse com o username e password criados no back end do python pelo terminal
